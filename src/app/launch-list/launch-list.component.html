@@ -1,1 +1,19 @@
-<p>launch-list works!</p>
+<ng-container *ngIf="pastLaunches$ | async as pastLaunches">
+  <main>
+    <section class="container">
+      <div class='row'>
+        <nb-card class='col-md-3' *ngFor="let launch of pastLaunches" [routerLink]="['/', launch.id]">
+          <nb-card-header>
+            <h6 id="cardTitle">{{ launch.mission_name }}</h6>
+            <sub>{{ launch.rocket.rocket_name }} - launched {{ launch.launch_date_utc | relativeTime }}</sub>
+            <img id='patchLogo' nb-card-avatar loading="lazy" [src]="launch.links.mission_patch_small"
+              alt="Mission patch for {{ launch.mission_name }}" />
+          </nb-card-header>
+          <img id='missionImg' nb-card-image loading="lazy" [src]="launch.links.flickr_images[0]"
+            alt="Photo of {{ launch.mission_name }}" />
+        </nb-card>
+      </div>
+    </section>
+  </main>
+
+</ng-container>

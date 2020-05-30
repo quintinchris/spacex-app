@@ -10,12 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbCardModule } from '@nebular/theme';
+import { NbButtonModule } from '@nebular/theme';
+import { RelativeTimePipe } from './relative-time/relative-time.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LaunchListComponent,
-    LaunchDetailsComponent
+    LaunchDetailsComponent,
+    RelativeTimePipe
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'dark' }),
     NbLayoutModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    NbCardModule,
+    NbButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

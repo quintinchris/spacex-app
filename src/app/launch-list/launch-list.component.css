@@ -1,0 +1,23 @@
+nb-card:hover {
+  cursor: pointer;
+}
+
+nb-card {
+  text-align: center;
+}
+
+#patchLogo {
+  margin-left: 3vh;
+  width: 30px;
+  height: 30px;
+}
+
+#missionImg {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+#cardTitle {
+  font-size: large;
+}
