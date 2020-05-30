@@ -1,0 +1,14 @@
+#logo {
+  filter: contrast(0%) brightness(0%) grayscale(100%) invert(1);
+  margin: auto 0;
+}
+
+#title {
+  margin: auto;
+  margin-left: 0;
+}
+
+nb-layout-header {
+  text-align: center;
+  color: black;
+}
