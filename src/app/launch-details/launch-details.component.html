@@ -1,1 +1,21 @@
-<p>launch-details works!</p>
+<ng-container *ngIf="launchDetails$ | async as launchDetails">
+  <section>
+    <nb-card>
+      <nb-card-header>
+        <div class="row">
+          <h1>{{ launchDetails.mission_name }}</h1>
+          <img id="detailPatch" nb-card-image [src]='launchDetails.links.mission_patch'
+            alt='Mission patch for {{ launchDetails.mission_name }}' />
+        </div>
+      </nb-card-header>
+
+      <nb-card-body>
+        <p>{{ launchDetails.details }}</p>
+      </nb-card-body>
+    </nb-card>
+  </section>
+  <section class="photo-grid">
+    <img *ngFor="let pic of launchDetails.links.flickr_images" [src]="pic"
+      alt="Picture of {{ launchDetails.mission_name }}" height="300" width="300" loading="lazy" />
+  </section>
+</ng-container>
