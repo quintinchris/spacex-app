@@ -13,6 +13,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbCardModule } from '@nebular/theme';
 import { NbButtonModule } from '@nebular/theme';
 import { RelativeTimePipe } from './relative-time/relative-time.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { RelativeTimePipe } from './relative-time/relative-time.pipe';
     NbLayoutModule,
     NbEvaIconsModule,
     NbCardModule,
-    NbButtonModule
+    NbButtonModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

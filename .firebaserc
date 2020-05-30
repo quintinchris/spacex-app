@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "spacexapp-2f2ae": {
+      "hosting": {
+        "spacex-app": [
+          "spacexapp-2f2ae"
+        ]
+      }
+    }
+  }
+}
